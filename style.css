@@ -1,0 +1,38 @@
+/* Till Deer Do Us Part — styles */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%; height: 100%;
+  background: #1a1a1a;
+  overflow: hidden;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  font-family: 'Nunito', 'Varela Round', system-ui, -apple-system, sans-serif;
+}
+
+/* Safe-area padding for notches */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+#game-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game-canvas {
+  display: block;
+  /* Desktop: letterbox into portrait frame */
+  max-width: 480px;
+  max-height: 100vh;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+/* Prevent iOS bounce */
+html { overflow: hidden; position: fixed; width: 100%; }
